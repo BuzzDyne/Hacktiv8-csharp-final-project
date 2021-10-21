@@ -1,0 +1,87 @@
+Nama: Ricky
+No Urut: FSDO001ONL019
+
+===========
+=  Intro  =
+===========
+Final project PaymentAPI adalah sebuah WebAPI .NET yang menggunakan EntityFramework yang dihost pada Heroku dengan Docker dan menggunakan database MySQL remote dari https://www.freemysqlhosting.net/
+
+==========================
+=  Penggunaan API Heroku =
+==========================
+1. API sudah dijalankan pada heroku (https://h8-csharp-final-paymentapp.herokuapp.com)
+2. Buka Postman dan Test endpoint. (Seluruh endpoint dijelaskan pada bagian berikutnya
+
+==========================
+=  Dokumentasi Endpoint  =
+==========================
+
+PaymentAPI memiliki 7 Endpoint, yang terbagi menjadi dua kategori. "AuthManagement" (2 endpoints) dan "Payment" (5 endpoints).
+
+Berikut adalah endpoint dalam kategori "AuthManagement":
+1. (POST) /api/AuthManagement/Register
+    - Untuk mendaftarkan akun baru
+    - Request Body:
+	{
+  	  "username": "string",
+  	  "email": "user@example.com",
+  	  "password": "string"
+	}
+
+2. (POST) /api/AuthManagement/Login
+    - Untuk mendapatkan JWT user.
+    - Request Body:
+	{
+  	  "email": "user@example.com",
+  	  "password": "string"
+	}
+
+Berikut adalah endpoint dalam kategori "Payment":
+1. (GET) /api/Payment
+    - Mengembalikan semua data payment yang tersimpan di database
+
+2. (GET) /api/Payment/{id}
+    - Mengembalikan sebuah data payment berdasarkan {id} yang diberikan.
+
+3. (POST) /api/Payment
+    - Mengirimkan data Payment baru untuk disimpan ke dalam database.
+    - Request Body:
+	{
+  	  "id": 0,
+  	  "cardOwnerName": "string",
+  	  "cardNumber": "string",
+  	  "expirationDate": "2021-10-21T07:36:31.062Z",
+  	  "securityCode": "string",
+  	  "sumOfPayment": 0
+	}
+
+4. (PUT) /api/Payment/{id}
+    - Memperbaharui sebuah data Payment berdasarkan {id} yang diberikan.
+    - Request Body:
+	{
+  	  "id": 0,
+  	  "cardOwnerName": "string",
+  	  "cardNumber": "string",
+  	  "expirationDate": "2021-10-21T07:36:31.062Z",
+  	  "securityCode": "string",
+  	  "sumOfPayment": 0
+	}
+
+5. (DELETE) /api/Payment/{id}
+    - Menghapus sebuah data Payment berdasarkan {id} yang diberikan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

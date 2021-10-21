@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "5ae997ef-bbad-4bbc-bb50-5283be89397f",
+		"name": "FinalAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQxMjA4NWY1LWZiZmQtNDU5My1hYmJkLTlkNTVlYmMwMWNhMSIsImVtYWlsIjoicm9vdEByb290LmNvbSIsInN1YiI6InJvb3RAcm9vdC5jb20iLCJqdGkiOiI3Mzg2Y2RkNS0yOTUyLTQ2OTYtYTU1ZS04MTAzNzI4ODRiNDUiLCJuYmYiOjE2MzQ3OTg4ODgsImV4cCI6MTYzNDgyMDQ4OCwiaWF0IjoxNjM0Nzk4ODg4fQ.NY4qNiombZt5tTT80x_h40-T7QHDThfvBtooHoH2mio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"POSTMAN\",\r\n  \"email\": \"postman@example.com\",\r\n  \"password\": \"Postman123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/AuthManagement/Register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"AuthManagement",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQxMjA4NWY1LWZiZmQtNDU5My1hYmJkLTlkNTVlYmMwMWNhMSIsImVtYWlsIjoicm9vdEByb290LmNvbSIsInN1YiI6InJvb3RAcm9vdC5jb20iLCJqdGkiOiI3Mzg2Y2RkNS0yOTUyLTQ2OTYtYTU1ZS04MTAzNzI4ODRiNDUiLCJuYmYiOjE2MzQ3OTg4ODgsImV4cCI6MTYzNDgyMDQ4OCwiaWF0IjoxNjM0Nzk4ODg4fQ.NY4qNiombZt5tTT80x_h40-T7QHDThfvBtooHoH2mio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"postman@example.com\",\r\n  \"password\": \"Postman123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/AuthManagement/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"AuthManagement",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQxMjA4NWY1LWZiZmQtNDU5My1hYmJkLTlkNTVlYmMwMWNhMSIsImVtYWlsIjoicm9vdEByb290LmNvbSIsInN1YiI6InJvb3RAcm9vdC5jb20iLCJqdGkiOiI3Mzg2Y2RkNS0yOTUyLTQ2OTYtYTU1ZS04MTAzNzI4ODRiNDUiLCJuYmYiOjE2MzQ3OTg4ODgsImV4cCI6MTYzNDgyMDQ4OCwiaWF0IjoxNjM0Nzk4ODg4fQ.NY4qNiombZt5tTT80x_h40-T7QHDThfvBtooHoH2mio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"cardOwnerName\": \"Mr. PostMan\",\r\n    \"cardNumber\": \"8828882\",\r\n    \"expirationDate\": \"2021-09-11T07:13:07\",\r\n    \"securityCode\": \"012321\",\r\n    \"sumOfPayment\": 250000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/Payment",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"Payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_BY_ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQxMjA4NWY1LWZiZmQtNDU5My1hYmJkLTlkNTVlYmMwMWNhMSIsImVtYWlsIjoicm9vdEByb290LmNvbSIsInN1YiI6InJvb3RAcm9vdC5jb20iLCJqdGkiOiI3Mzg2Y2RkNS0yOTUyLTQ2OTYtYTU1ZS04MTAzNzI4ODRiNDUiLCJuYmYiOjE2MzQ3OTg4ODgsImV4cCI6MTYzNDgyMDQ4OCwiaWF0IjoxNjM0Nzk4ODg4fQ.NY4qNiombZt5tTT80x_h40-T7QHDThfvBtooHoH2mio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"cardOwnerName\": \"Mr. PostMan\",\r\n    \"cardNumber\": \"8828882\",\r\n    \"expirationDate\": \"2021-09-11T07:13:07\",\r\n    \"securityCode\": \"012321\",\r\n    \"sumOfPayment\": 250000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/Payment/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"Payment",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQxMjA4NWY1LWZiZmQtNDU5My1hYmJkLTlkNTVlYmMwMWNhMSIsImVtYWlsIjoicm9vdEByb290LmNvbSIsInN1YiI6InJvb3RAcm9vdC5jb20iLCJqdGkiOiI3Mzg2Y2RkNS0yOTUyLTQ2OTYtYTU1ZS04MTAzNzI4ODRiNDUiLCJuYmYiOjE2MzQ3OTg4ODgsImV4cCI6MTYzNDgyMDQ4OCwiaWF0IjoxNjM0Nzk4ODg4fQ.NY4qNiombZt5tTT80x_h40-T7QHDThfvBtooHoH2mio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"cardOwnerName\": \"Mr. PostMan\",\r\n    \"cardNumber\": \"8828882\",\r\n    \"expirationDate\": \"2021-09-11T07:13:07\",\r\n    \"securityCode\": \"012321\",\r\n    \"sumOfPayment\": 250000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/Payment",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"Payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQxMjA4NWY1LWZiZmQtNDU5My1hYmJkLTlkNTVlYmMwMWNhMSIsImVtYWlsIjoicm9vdEByb290LmNvbSIsInN1YiI6InJvb3RAcm9vdC5jb20iLCJqdGkiOiI3Mzg2Y2RkNS0yOTUyLTQ2OTYtYTU1ZS04MTAzNzI4ODRiNDUiLCJuYmYiOjE2MzQ3OTg4ODgsImV4cCI6MTYzNDgyMDQ4OCwiaWF0IjoxNjM0Nzk4ODg4fQ.NY4qNiombZt5tTT80x_h40-T7QHDThfvBtooHoH2mio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"cardOwnerName\": \"Mrs. PostMan\",\r\n    \"cardNumber\": \"111111\",\r\n    \"expirationDate\": \"2022-09-11T07:13:07\",\r\n    \"securityCode\": \"99999\",\r\n    \"sumOfPayment\": 335000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/Payment/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"Payment",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQxMjA4NWY1LWZiZmQtNDU5My1hYmJkLTlkNTVlYmMwMWNhMSIsImVtYWlsIjoicm9vdEByb290LmNvbSIsInN1YiI6InJvb3RAcm9vdC5jb20iLCJqdGkiOiI3Mzg2Y2RkNS0yOTUyLTQ2OTYtYTU1ZS04MTAzNzI4ODRiNDUiLCJuYmYiOjE2MzQ3OTg4ODgsImV4cCI6MTYzNDgyMDQ4OCwiaWF0IjoxNjM0Nzk4ODg4fQ.NY4qNiombZt5tTT80x_h40-T7QHDThfvBtooHoH2mio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"cardOwnerName\": \"Mr. PostMan\",\r\n    \"cardNumber\": \"8828882\",\r\n    \"expirationDate\": \"2021-09-11T07:13:07\",\r\n    \"securityCode\": \"012321\",\r\n    \"sumOfPayment\": 250000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/Payment/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"Payment",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
